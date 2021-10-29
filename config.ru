@@ -1,4 +1,6 @@
 require_relative "./config/environment"
+require_relative "./app/controllers/categories_controller"
+require_relative "./app/controllers/palettes_controller"
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
@@ -13,3 +15,5 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+use CategoriesController
+use PalettesController
